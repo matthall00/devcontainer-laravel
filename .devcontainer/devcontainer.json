@@ -1,0 +1,30 @@
+{
+  "name": "Laravel Dev Container",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "php.validate.executablePath": "/usr/local/bin/php",
+        "editor.formatOnSave": true,
+        "files.associations": {
+          "*.blade.php": "html"
+        },
+        "intelephense.environment.phpVersion": "8.2"
+      },
+      "extensions": [
+        "bmewburn.vscode-intelephense-client",
+        "esbenp.prettier-vscode",
+        "onecentlin.laravel-blade",
+        "ryannaddy.laravel-artisan",
+        "onecentlin.laravel-snippets",
+        "amiralizadeh9480.laravel-extra-intellisense"
+      ]
+    }
+  },
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspace/${localWorkspaceFolderBasename},type=bind"
+  ],
+  "workspaceFolder": "/workspace/${localWorkspaceFolderBasename}",
+  "postCreateCommand": "./.devcontainer/scripts/laravel-init.sh"
+}

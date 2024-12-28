@@ -1,0 +1,31 @@
+{
+  "php.validate.executablePath": "/usr/local/bin/php",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 4,
+  "editor.detectIndentation": false,
+  "files.exclude": {
+    "**/.env": false,
+    "**/node_modules": true,
+    "**/vendor": true
+  },
+  "files.associations": {
+    "*.blade.php": "html"
+  },
+  "intelephense.files.exclude": [
+    "**/.git/**",
+    "**/node_modules/**",
+    "**/vendor/**"
+  ],
+  "intelephense.environment.phpVersion": "8.2", // Match your Laravel PHP version
+  "emmet.includeLanguages": {
+    "blade": "html"
+  },
+  "workbench.colorTheme": "Default Dark+",
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.env.linux": {
+    "APP_ENV": "local"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
